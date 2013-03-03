@@ -411,7 +411,7 @@ article {
   left: 50%;
   top:50%;
   width: 195px;
-  margin-top: -30px;
+  margin-top: -50px;
   margin-left: -98px;
 }
 
@@ -419,4 +419,24 @@ img {
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+footer {
+  background-color: #000;
+  bottom: 0;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+footer p {
+  color: #d9ff0d;
+  font-family: "OpenSans", "Helvetica Neue", Arial;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
 }
