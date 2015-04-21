@@ -36,5 +36,5 @@ document.getElementById('notify').onclick = function(e){
   e.preventDefault();
   console.log(document.getElementById('subscribe').value);
   if(regex_email.test(document.getElementById('subscribe').value))
-    sendMail(document.getElementById('subscribe').value);
+    sendEmail(document.getElementById('subscribe').value);
 };
