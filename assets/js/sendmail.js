@@ -15,18 +15,18 @@ function sendEmail(email) {
   }
 
   http.send(JSON.stringify({
-    'key': 'lkLGpjijZDMb31O3uw5sSA',
-    'message': {
-      'from_email': 'ant@onio.org',
-      'to': [
+    "key": "lkLGpjijZDMb31O3uw5sSA",
+    "message": {
+      "from_email": "ant@onio.org",
+      "to": [
           {
-            'email': 'zeura@zeura.com',
-            'type': 'to'
+            "email": "zeura@zeura.com",
+            "type": "to"
           }
         ],
-      'autotext': 'true',
-      'subject': 'Contacto zeura.com',
-      'html': email
+      "autotext": "true",
+      "subject": "Contacto zeura.com",
+      "html": "email"
     }
   }));
 }
