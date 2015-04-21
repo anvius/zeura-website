@@ -14,6 +14,8 @@ function sendEmail(email) {
     }
   }
 
+  http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
   http.send(JSON.stringify({
     "key": "lkLGpjijZDMb31O3uw5sSA",
     "message": {
