@@ -9,7 +9,7 @@
 body{
   margin: 0;
   font-family: 'Arvo', serif;
-  background:#000 url('bg.png') repeat;
+  background: #a40000 '../images/antelop.png';
   color: #fff;
   line-height: 30px;
   text-align: center;
