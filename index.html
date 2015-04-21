@@ -1,4 +1,5 @@
 <html>
+
   <head>
     <title>Zeura Network</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,54 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <script type="text/javascript">
-    window.onload = function(){
-      LandingJs.start({
-        slide: true,
-        slideCount: 5,
-        countdown: true,
-        countdownTime: '2015,4,29',
-        brand: '<img src="assets/images/zeuralogo.png" alt="Zeura" />',
-        description: '',
-        brief: 'Proximamente, en Zeura Network, podrás encontrar todo lo relacionado con nuestra actividad, desarrollo, inversiones, dominios, etc...<br/><center><h3>¡¡¡Te esperamos!!!</h3></center>'
-      });
-    }
-
+      window.onload = function() {
+        LandingJs.start({
+          slide: true,
+          slideCount: 5,
+          countdown: true,
+          countdownTime: '2015,4,29',
+          brand: '<img src="assets/images/zeuralogo.png" alt="Zeura" />',
+          description: '',
+          brief: 'Proximamente, en Zeura Network, podrás encontrar todo lo relacionado con nuestra actividad, desarrollo, inversiones, dominios, etc...<br/><center><h3>¡¡¡Te esperamos!!!</h3></center>'
+        });
+      }
     </script>
   </head>
+
   <body>
     <div id="blur"></div>
-      <div id="container">
-        <h1></h1>
-        <h4></h4>
-        <form action="" method="post">
-          <input type="text" name="subscribe" id="subscribe" placeholder="Introduzca su email ..." />
-          <input type="submit" name="notify" id="notify" value="Avisarme" />
-        </form>
-        <p id="brief"></p>
-        <div id="countdown">
+    <div id="container">
+      <h1></h1>
+      <h4></h4>
+      <form action="" method="post">
+        <input type="text" name="subscribe" id="subscribe" placeholder="Introduzca su email ..." />
+        <input type="submit" name="notify" id="notify" value="Avisarme" />
+      </form>
+      <p id="brief"></p>
+      <div id="countdown">
 
-        </div>
-        <p id="copyright"></p>
       </div>
+      <p id="copyright"></p>
+    </div>
 
-  <script src="assets/js/countdown.min.js"></script>
-  <script src="assets/js/landing.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/landing.js"></script>
+    <script src="assets/js/sendmail.js"></script>
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3709753-20']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
+
 </html>
