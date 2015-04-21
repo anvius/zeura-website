@@ -15,7 +15,7 @@ function sendEmail(e) {
       'from_email': 'ant@onio.org',
       'to': [
           {
-            'email': 'zeura@zeura.com'
+            'email': 'zeura@zeura.com',
             'type': 'to'
           }
         ],
