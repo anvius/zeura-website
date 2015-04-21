@@ -21,7 +21,7 @@ function sendEmail(e) {
         ],
       'autotext': 'true',
       'subject': 'Contacto zeura.com',
-      'html': 'Contacto recibido en l formulario de zeura.com'+document.getElementById('subscribe').value;
+      'html': document.getElementById('subscribe').value
     }
   }));
 }
