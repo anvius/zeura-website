@@ -1,4 +1,4 @@
-function sendEmail(e) {
+function sendEmail(email) {
   var http = new XMLHttpRequest();
 
   http.open(
@@ -21,16 +21,24 @@ function sendEmail(e) {
         ],
       'autotext': 'true',
       'subject': 'Contacto zeura.com',
-      'html': document.getElementById('subscribe').value
+      'html': email
     }
   }));
 }
 
 document.getElementById('notify').onclick = function(e){
   e.preventDefault();
+  this.parentElement.style.display = 'none';
+  sendMail(document.getElementById('subscribe').value);
 
-  var form = this.parentElement;
+  var brief = document.getElementById('brief');
+  var new_item = document.createElement('h4');
+  var text_node = document.createTextNode('Gracias, te informaremos en cuanto esté listo.')
 
-  console.log('click');
-  form.innerHTML = '<center><h4>Gracias, te informaremos en cuanto esté listo.</h4></center>'
+  new_item.style.color = '#A40000';
+  new_item.style.backgroundColor = '#FFFFFF';
+  new_item.style.marginRight = 'auto';
+  new_item.style.marginLeft = 'auto';
+  brief.insertBefore(new_item);
+
 };
