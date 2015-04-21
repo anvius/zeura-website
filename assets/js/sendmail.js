@@ -6,9 +6,14 @@ function sendEmail(email) {
     'https://mandrillapp.com/api/1.0/messages/send.json',
     true
   );
-  http.onload = function () {
-      alert("complete: " + http.resposeText);
+  http.onreadystatechange = function(){
+    if(xmlhttp.status==200){
+      document.getElementById('notify').disable = true;
+      document.getElementById('subscribe').disable = true;
+      document.getElementById('notify').value = 'Enviado';
+    }
   }
+
   http.send(JSON.stringify({
     'key': 'lkLGpjijZDMb31O3uw5sSA',
     'message': {
@@ -27,18 +32,9 @@ function sendEmail(email) {
 }
 
 document.getElementById('notify').onclick = function(e){
+  var regex_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2,4})?)$/i;
   e.preventDefault();
-  this.parentElement.style.display = 'none';
-  sendMail(document.getElementById('subscribe').value);
-
-  var brief = document.getElementById('brief');
-  var new_item = document.createElement('h4');
-  var text_node = document.createTextNode('Gracias, te informaremos en cuanto esté listo.')
-
-  new_item.style.color = '#A40000';
-  new_item.style.backgroundColor = '#FFFFFF';
-  new_item.style.marginRight = 'auto';
-  new_item.style.marginLeft = 'auto';
-  brief.insertBefore(new_item);
-
+  console.log(document.getElementById('subscribe').value);
+  if(regex_email.test(document.getElementById('subscribe').value))
+    sendMail(document.getElementById('subscribe').value);
 };
