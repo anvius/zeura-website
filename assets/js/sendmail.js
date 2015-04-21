@@ -1,5 +1,4 @@
 function sendEmail(e) {
-  e.preventDefault();
   var http = new XMLHttpRequest();
 
   http.open(
@@ -28,8 +27,11 @@ function sendEmail(e) {
   }));
 }
 
-document.getElementById('notify').onclick = function(){
+document.getElementById('notify').onclick = function(e){
+  e.preventDefault();
+
   var form = this.parentElement;
+
   console.log('click');
   form.innerHTML = '<center><h4>Gracias, te informaremos en cuanto esté listo.</h4></center>'
 };
