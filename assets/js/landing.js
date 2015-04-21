@@ -29,7 +29,7 @@ var LandingJs = {
     },
 
     _setOptions: function(config){
-      console.log(config.slideCount)
+      //console.log(config.slideCount)
       LandingJs.option[0] = config.slide;
       LandingJs.option[1] = config.slideCount;
       LandingJs.option[2] = config.countdown;
@@ -112,7 +112,7 @@ var LandingJs = {
           var url = 'www.bing.com/'+images[0].getElementsByTagName('url')[0].innerHTML;
           var copyright = images[0].getElementsByTagName('copyright')[0].innerHTML;
           var body = document.getElementById('blur');
-          console.log(url);
+          //console.log(url);
           document.getElementById('container').style.minHeight = window.innerHeight-70+'px';
           body.style.backgroundImage = 'url("http://'+url+'")';
           document.getElementById('copyright').innerHTML = copyright;
