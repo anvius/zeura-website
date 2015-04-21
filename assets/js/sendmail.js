@@ -22,7 +22,7 @@ function sendEmail() {
         ],
       'autotext': 'true',
       'subject': 'Contacto zeura.com',
-      'html': 'Contacto recibido en l formulario de zeura.com'
+      'html': 'Contacto recibido en l formulario de zeura.com'+document.getElementById('subscribe').value;
     }
   }));
 }
