@@ -1,4 +1,5 @@
-function sendEmail() {
+function sendEmail(e) {
+  e.preventDefault();
   var http = new XMLHttpRequest();
 
   http.open(
