@@ -10,7 +10,6 @@ function sendEmail(e) {
       alert("complete: " + http.resposeText);
   }
   http.send(JSON.stringify({
-    {
     'key': 'lkLGpjijZDMb31O3uw5sSA',
     'message': {
       'from_email': 'ant@onio.org',
