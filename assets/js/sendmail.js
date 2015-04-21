@@ -7,7 +7,7 @@ function sendEmail(email) {
     true
   );
   http.onreadystatechange = function(){
-    if(xmlhttp.status==200){
+    if(http.status==200){
       document.getElementById('notify').disable = true;
       document.getElementById('subscribe').disable = true;
       document.getElementById('notify').value = 'Enviado';
