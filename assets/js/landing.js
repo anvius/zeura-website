@@ -19,7 +19,7 @@ var LandingJs = {
       _images: [],
     },
 
-    currentSlider: 0,
+    currentSlider: 3,
     maxSliderCount: 5,
 
     start: function(config){
