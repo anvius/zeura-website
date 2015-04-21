@@ -10,7 +10,7 @@ body{
   margin: 0;
   font-family: 'Arvo', serif;
   background-color: #a40000;
-  background-image: 'assets/images/antelope.png';
+  background-image: '../images/antelope.png';
   color: #fff;
   line-height: 30px;
   text-align: center;
