@@ -13,7 +13,7 @@
         slideCount: 5,
         countdown: true,
         countdownTime: '2015,5,29',
-        brand: '',
+        brand: '<img src="assets/images/zeuralogo.png" alt="Zeura" />',
         description: 'Preparando este site',
         brief: 'Proximamente, en Zeura Network, podrás encontrar todo lo relacionado con nuestra actividad, desarrollo, inversiones, dominios, etc... ¡¡¡Te esperamos!!!'
       });
@@ -24,7 +24,8 @@
   <body>
     <div id="blur"></div>
       <div id="container">
-        <img src="assets/images/zeuralogo.png" alt="Zeura" />
+        <!--<img src="assets/images/zeuralogo.png" alt="Zeura" />-->
+        <h1></h1>
         <h4></h4>
         <form action="save.php" method="post">
           <input type="text" name="subscribe" id="subscribe" placeholder="Introduzca su email ..." />
@@ -38,6 +39,6 @@
       </div>
 
   <script src="assets/js/countdown.min.js"></script>
-  <script src="assets/js/landing.min.js"></script>
+  <script src="assets/js/landing.js"></script>
   </body>
 </html>
