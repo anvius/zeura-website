@@ -9,7 +9,8 @@
 body{
   margin: 0;
   font-family: 'Arvo', serif;
-  background: #a40000 url('../images/antelope.png') repeat;
+  /*background: #a40000 url('../images/antelope.png') repeat;*/
+  background: #000;
   color: #fff;
   line-height: 30px;
   text-align: center;
