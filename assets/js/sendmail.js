@@ -34,7 +34,6 @@ function sendEmail(email) {
 document.getElementById('notify').onclick = function(e){
   var regex_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2,4})?)$/i;
   e.preventDefault();
-  console.log(document.getElementById('subscribe').value);
   if(regex_email.test(document.getElementById('subscribe').value))
     sendEmail(document.getElementById('subscribe').value);
 };
