@@ -15,7 +15,7 @@ var LandingJs = {
       _CountDownDate: null,
       _brand: 'Untitled',
       _description: 'No Description entered as config',
-      _breif: null,
+      _brief: null,
       _images: [],
     },
 
@@ -29,7 +29,6 @@ var LandingJs = {
     },
 
     _setOptions: function(config){
-      //console.log(config.slideCount)
       LandingJs.option[0] = config.slide;
       LandingJs.option[1] = config.slideCount;
       LandingJs.option[2] = config.countdown;
@@ -92,7 +91,8 @@ var LandingJs = {
     },
 
     _urlGenerator: function(){
-    	return 'http://www.bing.com/HPImageArchive.aspx?format=json&idx=5&n=5&mkt=en-US.xml';
+    	return 'data/bing.images.xml';
+      // http://www.bing.com/HPImageArchive.aspx?format=json&idx=5&n=5&mkt=en-US.xml
     },
 
     _loadXMLDoc: function(url){
@@ -112,7 +112,6 @@ var LandingJs = {
           var url = 'www.bing.com/'+images[0].getElementsByTagName('url')[0].innerHTML;
           var copyright = images[0].getElementsByTagName('copyright')[0].innerHTML;
           var body = document.getElementById('blur');
-          //console.log(url);
           document.getElementById('container').style.minHeight = window.innerHeight-70+'px';
           body.style.backgroundImage = 'url("http://'+url+'")';
           document.getElementById('copyright').innerHTML = copyright;
