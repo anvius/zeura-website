@@ -1,59 +1,44 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="es"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<html>
+  <head>
+    <title>Zeura Network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Zeura Network :: Ciencias de la computación</title>
-		<meta name="description" content="Zeura Network es una empresa dedicada al análisis y desarrollo de servicios web y móvil.">
-		<meta name="viewport" content="width=device-width">
-		
-		<!-- If you want geolocalizate the website>
-		<meta name=“geo.region” content=“United States” />
-		<! -->
-		
-		<link rel="shortcut icon" href="assets/images/favicon.png">
-		<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-touch-icon-144x144.png">
-		
-		<link rel="stylesheet" href="assets/css/style.css">
-		<script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
-	</head>
-	<body>
-		<!--[if lt IE 7]>
-			<p class="chromeframe">Est&aacute; usando un navegador <strong>desfasado</strong>, no v&aacute;lido para sitios web actuales. Por favor <a href="http://browsehappy.com/">actualice su navegador</a>.</p>
-		<![endif]-->
-	        
-		<!-- Main content -->
-		<article>
-			<a href="/">
-				<img src="assets/images/logo.png" width="195" height="60" />
-			</a>
-		</article>
-		<footer>
-			<p>Estamos haciendo cambios en la web. Disculpe las molestias.</p>
-		</footer>
+    <script type="text/javascript">
+    window.onload = function(){
+      LandingJs.start({
+        slide: true,
+        slideCount: 5,
+        countdown: true,
+        countdownTime: '2015,29,5',
+        brand: 'zeura',
+        description: 'Preparando este site',
+        brief: 'Proximamente, en Zeura Network, podrás encontrar todo lo relacionado con nuestra actividad, desarrollo, inversiones, dominios, etc... ¡¡¡Te esperamos!!!'
+      });
+    }
 
-<script type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div id="blur"></div>
+      <div id="container">
+        <img src="assets/images/zeuralogo.png" alt="Zeura" />
+        <h1></h1>
+        <h4></h4>
+        <form action="save.php" method="post">
+          <input type="text" name="subscribe" id="subscribe" placeholder="Introduzca su email ..." />
+          <input type="submit" name="notify" id="notify" value="Notificarme..." />
+        </form>
+        <p id="brief"></p>
+        <div id="countdown">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-3709753-20']);
-  _gaq.push(['_trackPageview']);
+        </div>
+        <p id="copyright"></p>
+      </div>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-	</body>
-
+  <script src="assets/js/countdown.min.js"></script>
+  <script src="assets/js/landing.min.js"></script>
+  </body>
 </html>
