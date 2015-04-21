@@ -60,7 +60,7 @@ var LandingJs = {
           for(var i = 0 ; i < splits.length ; i++){
             var number = splits[i].split(' ')[0];
             var content = splits[i].split(' ')[1];
-            if(content != 'hours')
+            //if(content != 'hours')
               result = result + '<p><b>'+number+'</b><br /><span> '+content+'</span></p>';
           }
           cdel.innerHTML = result ;
@@ -80,7 +80,7 @@ var LandingJs = {
           if(LandingJs.currentSlider>=LandingJs.option[1])
             LandingJs.currentSlider = 0;
 
-        },8000);
+        },20000);
       }
 
     },
