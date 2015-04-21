@@ -92,7 +92,7 @@ var LandingJs = {
     },
 
     _urlGenerator: function(){
-    	return 'http://bing.com/HPImageArchive.aspx?format=json&idx=5&n=5&mkt=en-US.xml';
+    	return 'http://www.bing.com/HPImageArchive.aspx?format=json&idx=5&n=5&mkt=en-US.xml';
     },
 
     _loadXMLDoc: function(url){
@@ -101,21 +101,22 @@ var LandingJs = {
   		  xmlhttp=new XMLHttpRequest();
   		else
   		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  		  xmlhttp.onreadystatechange=function() {
-    		  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		  xmlhttp.onreadystatechange=function() {
+  		  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 
-            var images = xmlhttp.responseXML.getElementsByTagName('images');
+          var images = xmlhttp.responseXML.getElementsByTagName('images');
 
-            for(var i = 0 ; i<images[0].childNodes.length ; i++)
-              LandingJs.option._images[i] = images[0].childNodes[i];
+          for(var i = 0 ; i<images[0].childNodes.length ; i++)
+            LandingJs.option._images[i] = images[0].childNodes[i];
 
-            var url = 'bing.com/'+images[0].getElementsByTagName('url')[0].innerHTML;
-            var copyright = images[0].getElementsByTagName('copyright')[0].innerHTML;
-            var body = document.getElementById('blur');
-            document.getElementById('container').style.minHeight = window.innerHeight-70+'px';
-            body.style.backgroundImage = 'url("http://'+url+'")';
-            document.getElementById('copyright').innerHTML = copyright;
-    	    }
+          var url = 'www.bing.com/'+images[0].getElementsByTagName('url')[0].innerHTML;
+          var copyright = images[0].getElementsByTagName('copyright')[0].innerHTML;
+          var body = document.getElementById('blur');
+          console.log(url);
+          document.getElementById('container').style.minHeight = window.innerHeight-70+'px';
+          body.style.backgroundImage = 'url("http://'+url+'")';
+          document.getElementById('copyright').innerHTML = copyright;
+  	    }
   	  	}
   		xmlhttp.open("GET",url,true);
   		xmlhttp.send();
