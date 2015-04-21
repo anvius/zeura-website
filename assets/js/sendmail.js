@@ -27,10 +27,8 @@ function sendEmail() {
   }));
 }
 
-var send_button = document.getElementById('notify');
-
-send_button.onclick = function(){
+document.getElementById('notify').onclick = function(){
   var form = this.parentElement;
-
-  form.innerHTML = '<center><h4>Gracias, te informaremos en cuanto esté listo.</h4></center>'  
+  console.log('click');
+  form.innerHTML = '<center><h4>Gracias, te informaremos en cuanto esté listo.</h4></center>'
 };
